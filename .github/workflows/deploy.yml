@@ -12,11 +12,20 @@ jobs:
       - name: Hello Preprod
         run: echo Hello, preprod!
 
-  prod:
+  prod1:
     runs-on: ubuntu-latest
     environment: prod
 
     steps:
       - uses: actions/checkout@v4
       - name: Hello Prod
-        run: echo Hello, prod!
+        run: echo Hello, prod1!
+
+  prod2:
+    runs-on: ubuntu-latest
+    environment: prod
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hello Prod
+        run: echo Hello, prod2!
