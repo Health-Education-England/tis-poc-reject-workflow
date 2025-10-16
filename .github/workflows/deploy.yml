@@ -1,0 +1,22 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  preprod:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hello Preprod
+        run: echo Hello, preprod!
+
+  prod:
+    runs-on: ubuntu-latest
+    environment: prod
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hello Prod
+        run: echo Hello, prod!
