@@ -13,6 +13,7 @@ jobs:
         run: echo Hello, preprod!
 
   prod1:
+    needs: preprod
     runs-on: ubuntu-latest
     environment: prod
 
@@ -22,6 +23,7 @@ jobs:
         run: echo Hello, prod1!
 
   prod2:
+    needs: preprod
     runs-on: ubuntu-latest
     environment: prod
 
